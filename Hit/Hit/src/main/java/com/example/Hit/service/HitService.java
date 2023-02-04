@@ -8,7 +8,7 @@ public class HitService {
 
     private static HashMap<String,Hit> map = new HashMap<>();
         Hit obj=new Hit();
-    public Hit addUser(String name){
+    public HashMap<String,Hit> addUser(String name){
        if(map.containsKey(name)){
            Hit temp=map.get(name);
 
@@ -18,6 +18,6 @@ public class HitService {
            map.put(name,new Hit(name,1));
 
        }
-        return map.get(name);
+        return map;
     }
 }

@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class HitController {
 //localhost:8080/api/v1/visitor-app/count/username/sonu
     @GetMapping("/username/{username}")
-    public Hit getHitCount(@PathVariable String username){
+    public HashMap<String,Hit> getHitCount(@PathVariable String username){
         HitService hitService=new HitService();
         return hitService.addUser(username);
     }
